@@ -18,7 +18,7 @@ const projects = [
     title: "Movie Booking System",
     description: "Movie booking platform with movie selection and booking flow.",
     image: project2,
-    tags: ["Java", "MySQL", "HTML", "CSS","JavaScript"],
+    tags: ["Java", "MySQL", "HTML", "CSS",],
     demoUrl: "#",
     githubUrl: " https://github.com/AkashAkki018/Movie-Booking-System ",
   },
