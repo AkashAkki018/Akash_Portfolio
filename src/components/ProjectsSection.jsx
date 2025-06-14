@@ -11,7 +11,7 @@ const projects = [
     image: project1,
     tags: ["Java", "MySQL", "HTML", "CSS",],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/AkashAkki018/Student-Management-Web-Application",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = [
     image: project2,
     tags: ["Java", "MySQL", "HTML", "CSS","JavaScript"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: " https://github.com/AkashAkki018/Movie-Booking-System ",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projects = [
     image: project3,
     tags: ["React", "TailwindCSS", "JavaScript"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/AkashAkki018/Akash_Portfolio",
   },
 ];
 
@@ -77,6 +77,7 @@ const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
+                    { /*
                     <a
                       href={project.demoUrl}
                       target="_blank"
@@ -84,6 +85,7 @@ const ProjectsSection = () => {
                     >
                       <ExternalLink size={20} />
                     </a>
+                   */ }
                     <a
                       href={project.githubUrl}
                       target="_blank"

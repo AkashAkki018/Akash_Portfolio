@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -13,6 +13,7 @@ const navItems = [
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +22,22 @@ function Navbar() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        if (isMenuOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMenuOpen]);
 
     const closeMenu = () => {
         setIsMenuOpen(false);
@@ -68,12 +85,24 @@ function Navbar() {
             </nav>
 
             {/* mobile menu overlay */}
-            <div className={cn(
-                "fixed inset-0 bg-background/95 backdrop-blur-md z-40",
-                "transition-all duration-300 md:hidden",
-                "flex flex-col items-center justify-center",
-                isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-            )}>
+            <div 
+                ref={menuRef}
+                className={cn(
+                    "fixed inset-0 bg-background/95 backdrop-blur-md z-40",
+                    "transition-all duration-300 md:hidden",
+                    "flex flex-col items-center justify-center",
+                    isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                )}
+            >
+                {/* Close button */}
+                <button
+                    onClick={closeMenu}
+                    className="absolute top-4 right-4 p-2 text-foreground hover:text-primary transition-colors"
+                    aria-label="Close menu"
+                >
+                    <X size={24} />
+                </button>
+
                 <div className="flex flex-col space-y-8 text-xl">
                     {navItems.map((item, key) => (
                         <a 
