@@ -1,5 +1,5 @@
 import { Briefcase, Code, User, Cpu, ArrowDown } from "lucide-react";
-import resume from "../assets/KALLEM AKASH.pdf";
+import resume from "../assets/Resume_Kallem Akash.pdf";
 
 const AboutSection = () => {
   return (
@@ -36,7 +36,7 @@ const AboutSection = () => {
 
               <a
                 href={resume}
-                download="KALLEM AKASH.pdf"
+                download="Resume_Kallem Akash"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV

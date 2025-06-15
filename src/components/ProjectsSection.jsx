@@ -1,5 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import project1 from "../assets/21429.jpg";
+import project1 from "../assets/project1.jpg";
 import project3 from "../assets/project3.png";
 import project2 from "../assets/project2.jpg";
 
