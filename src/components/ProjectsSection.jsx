@@ -11,8 +11,8 @@ const projects = [
 			"Full-stack video downloader with secure login, responsive UI, and multi-platform support.",
 		image: project2,
 		tags: ["Java", "Spring Boot", "React", "TailwindCSS", "RapidAPI"],
-		demoUrl: "#",
-		githubUrl: "#",
+		demoUrl: "https://clipzip.vercel.app",
+		githubUrl: "https://github.com/Kallem-Akash/ClipZip-Frontend",
 	},
 	{
 		id: 2,
@@ -21,7 +21,7 @@ const projects = [
 		image: project1,
 		tags: ["Java", "MySQL", "HTML", "CSS"],
 		demoUrl: "#",
-		githubUrl: "https://github.com/AkashAkki018/Student-Management-Web-Application",
+		githubUrl: "https://github.com/Kallem-Akash/Student-Management-Web-Application",
 	},
 	{
 		id: 3,
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
 					<a
 						className="cosmic-button w-fit flex items-center mx-auto gap-2"
 						target="_blank"
-						href="https://github.com/AkashAkki018"
+						href="https://github.com/Kallem-Akash"
 					>
 						Check My Github <ArrowRight size={16} />
 					</a>

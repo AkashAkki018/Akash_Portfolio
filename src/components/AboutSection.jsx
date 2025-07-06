@@ -1,5 +1,5 @@
 import { Briefcase, Code, User, Cpu, ArrowDown } from "lucide-react";
-import resume from "../assets/Resume_Kallem Akash.pdf";
+import resume from "../assets/Resume_Akash.pdf";
 
 const AboutSection = () => {
   return (
